@@ -1,18 +1,3 @@
 import os
-import signal
-
-def handle_ctrl_z(signum, frame):
-    print("Script stopped by user with Ctrl+Z.")
-    exit(0)  # Gracefully exit
-
-# Handle Ctrl+Z (SIGTSTP)
-signal.signal(signal.SIGTSTP, handle_ctrl_z)
-
-while True:
-    try:
-        exit_code = os.system('python3.9 Bot.py')
-        print(f"Bot exited with code {exit_code}. Restarting...")
-    except KeyboardInterrupt:
-        print("Ctrl+C detected. Restarting bot...")
-    except Exception as e:
-        print(f"Unexpected error: {e}. Restarting...")
+print('lol')
+os.system('clear')
